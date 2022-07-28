@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<body>
+    <div class="container">
+        <h2>basice jquery selectorz</h2>
+        <div class="test">
+            <h3>Test Box</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius sapiente debitis aut eaque atque ratione enim ullam optio maiores minima?</p>
+        </div>
+        <div id="ul">
+            <li>orange</li>
+            <li>apple</li>
+            <li>banana</li>
+            <li>orange</li>
+            <li>orange</li>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.test').click(function() {
+                $('.test').css('background-color', 'orange')
+            });
+            $('.test').mouseover(function() {
+                $('.test').css('background-color', 'green');
+            })
+            $('.test').dubleclick(function() {
+                $('this').css('backgorund-color', '#fff')
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
