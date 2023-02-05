@@ -19,23 +19,7 @@
         </div>
         <div class="container">
             <table class="table" id="table_data">
-                <thead>
-                    <tr>
-                        <th scope="col">SL</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">User Email</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <!-- <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td> -->
-
-                    </tr>
-
-                </tbody>
             </table>
         </div>
 
@@ -52,7 +36,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function() {
-        $('#load-button').on("click", function(e) {
+        function loadData() {
             $.ajax({
                 url: "ajax-load.php",
                 type: "POST",
@@ -60,7 +44,17 @@
                     $('#table_data').html(data);
                 }
             });
-        });
+        }
+        loadData();
+        // $('#load-button').on("click", function(e) {
+        //     $.ajax({
+        //         url: "ajax-load.php",
+        //         type: "POST",
+        //         success: function(data) {
+        //             $('#table_data').html(data);
+        //         }
+        //     });
+        // });
 
     });
     </script>
